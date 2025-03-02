@@ -17,5 +17,13 @@ public class MyFirstResourceClass {
         return "Hello from Short Polling";
     }
 
+    @GetMapping("/longPoll")
+    public String poll() throws InterruptedException {
+        // Simulate long polling by waiting for 10 seconds
+
+        Thread.sleep(10000);
+        return "Hello, World!";
+    }
+
 
 }
